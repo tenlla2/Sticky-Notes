@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pos-it</title>
+    <style>
+        body{
+            background-image: url("tablon.jpg");
+        }
+        .Nota{
+            width: 200px;
+            height: 200px;
+            border: 2px solid yellow;
+            border-radius: 15px;
+            background-color: yellow;
+            margin-left: 10px;
+            margin-bottom: 10px;
+            display: inline-block;
+            text-align:center;
+		    position:relative;
+            cursor:pointer;}
+        
+        .boton{
+            width: 20px;
+            height: 20px;
+            border: none;
+            background-color: yellow;        
+            position:absolute;
+            top:0%;
+            right:0%;
+            background-image: url("editar.png");
+            background-size: 100%;
+            background-repeat: no-repeat;
+            
+        }
+        #papelera{
+            position:absolute;
+            top:0%;
+            right:0%;
+            width: 100px;
+            height: 100px;
+            background-image: url("papelera.png");
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+        #añadir{
+            border: none;
+            background-color:chocolate;
+            color: white;
+            border-radius: 4px;
+            font-size: 15px;
+            width:100px;
+            height:50px;
+            cursor: pointer;
+            box-shadow: 0px 0px 3px 1px grey;
+            transition: background-color 0.5s, transform 0.5s;
+                }
+        *:focus{
+            outline:none;
+            }
+
+        #añadir:hover{
+            background-color:brown;
+            transform: scale(1.05, 1.05);
+        }
+        #cambio{
+            width: 200px;
+            height: 100px;
+            border: 2px solid yellow;
+            background-color: yellow;
+            border-radius: 10px;
+            margin-left: 10px;
+            margin-bottom: 10px;
+            display: inline-block;
+            text-align:center;
+		    position:relative;
+            cursor:pointer;
+        }
+        h1{
+            color: red;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
+            text-decoration: underline;
+            margin-top: 0%;
+        }
+
+        h2{
+            text-align: justify;
+        }
+        h3{
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body onload="main();creaMovimiento();">
+        <div id="papelera"></div>
+        <button id="añadir" onclick="añadirNotaFormulario()">Añadir Nota</button>
+        <p>Título: <input id="titulo" type="text" name="Título"></p>
+        <p>Texto: <input id="texto" type="text" name="Texto"></p>
+        <script src="nota.js"></script>
+
+        
+</body>
+</html>
